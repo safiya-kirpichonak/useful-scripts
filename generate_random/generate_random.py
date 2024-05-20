@@ -18,7 +18,7 @@ This script generates random variables:
 - MAC addresses
 """
 
-print(hello_message)
+# print(hello_message)
 
 description = "This script generates random variables."
 parser = argparse.ArgumentParser(description=textwrap.dedent(description))
@@ -48,8 +48,20 @@ def generate_password(length):
     characters = string.ascii_letters + string.digits + "!@#$%^&*()"
     return "".join(random.choice(characters) for _ in range(length))
 
+def generate_mac_address():
+    """
+    Generate a random MAC address.
+    """
+    
+    mac = [0x00, 0x16, 0x3E, 
+           random.randint(0x00, 0x7F),
+           random.randint(0x00, 0xFF),
+           random.randint(0x00, 0xFF)]
+    return ':'.join(map(lambda x: f"{x:02x}", mac))
 
 if args.type == TYPE_PASSWORD and args.length:
     print(generate_password(args.length))
+elif args.type == TYPE_MAC_ADDRESS:
+    print(generate_mac_address())
 else:
     print("Invalid scheme.")
