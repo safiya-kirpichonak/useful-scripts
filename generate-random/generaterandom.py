@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import random
 import string
@@ -13,6 +13,7 @@ class Types:
     IPV6 = "ipv6"
     MAC_ADDRESS = "mac"
     PASSWORD = "password"
+
 
 def generate_password(length):
     """
@@ -65,7 +66,7 @@ def generate_ipv6():
 if __name__ == "__main__":
     # initialize arguments parser
     parser = argparse.ArgumentParser(description="This script generates random variables.")
-    parser.add_argument("-t", "--type", type=str, help="Type of generated string.")
+    parser.add_argument("-t", "--type", type=str, help="Type of generated string: ipv4, ipv6, mac, password.")
     parser.add_argument("-l", "--length", type=int, help="Length of password. (required for password type)")
     args = parser.parse_args()
 
