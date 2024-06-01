@@ -8,7 +8,7 @@ separate repository, but they are theoretically useful and I use them from time 
 clone this project:
 
 ```
-git clone git@github.com:trudy418/usefull-scripts.git
+git clone git@github.com:trudy418/useful-scripts.git
 ```
 
 ## List of scripts
