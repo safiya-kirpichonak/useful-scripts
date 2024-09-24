@@ -17,4 +17,6 @@ git clone git@github.com:trudy418/useful-scripts.git
 
 ## Plan
 
-...
+- graphics and functions - ???
+- shapes - operations and visualization with shapes.
+- vectors - operations and visualization with vectors.
